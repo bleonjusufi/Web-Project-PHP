@@ -24,11 +24,19 @@
           <div class="dropdown">
             <button class="dropbtn">Sherbime tjera ↓</button>
             <div class="dropdown-content">
-            <a href="https://accounts.google.com/v3/signin/identifier?dsh=S-1894920174%3A1674647736848699&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&hd=ubt-uni.net&ltmpl=default&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=AWnogHeBVRDRqO-cQ6am6eONgYF65SmsJoPYKV4ZAwpFJ77wWzoNKPh-hSEQa3VbU_CxZgrQFljOkg">Mail</a>
+              <a
+                href="https://accounts.google.com/v3/signin/identifier?dsh=S-1894920174%3A1674647736848699&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&hd=ubt-uni.net&ltmpl=default&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=AWnogHeBVRDRqO-cQ6am6eONgYF65SmsJoPYKV4ZAwpFJ77wWzoNKPh-hSEQa3VbU_CxZgrQFljOkg"
+                >Mail</a
+              >
               <a href="https://smis.ubt-uni.net/my/loginform.aspx">SMIS</a>
               <a href="https://moodle.ubt-uni.net/login/index.php">Moodle</a>
-              <a href="https://branch.ubt-uni.net/TV/ScheduleIndex.aspx">Orari Ditore</a>
-              <a href="http://student.ubt-uni.net/LoginWithGoogle.aspx?undefined">Studenti</a>
+              <a href="https://branch.ubt-uni.net/TV/ScheduleIndex.aspx"
+                >Orari Ditore</a
+              >
+              <a
+                href="http://student.ubt-uni.net/LoginWithGoogle.aspx?undefined"
+                >Studenti</a
+              >
             </div>
           </div>
         </div>
