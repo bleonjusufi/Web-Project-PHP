@@ -309,19 +309,19 @@ footer {
   .footer-box {
     margin: 10px 0 10px 0;
   }
-  .col-lg-5 {
+  .firstColumn {
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
     width: 100%;
   }
-  .col-lg-4 {
+  .secondColumn {
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
     width: 100%;
   }
-  .col-lg-3 {
+  .thirdColumn {
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;

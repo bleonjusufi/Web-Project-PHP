@@ -168,7 +168,7 @@ footer {
   font-weight: 700;
   font-size: 20px;
 }
-.col-lg-5 {
+.firstColumn {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
@@ -178,13 +178,13 @@ footer {
   color: white;
   width: 100%;
 }
-.col-lg-4 {
+.secondColumn {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
   width: 33.3%;
 }
-.col-lg-3 {
+.thirdColumn {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
@@ -240,4 +240,96 @@ footer {
 }
 .social-media__links:hover {
   border: none;
+}
+@media only screen and (max-width: 390px) {
+  body.open {
+    overflow: hidden;
+  }
+  .header-wrapper {
+    border-bottom: 2px solid #0a223d;
+  }
+  .dropdown {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    z-index: 4;
+  }
+  .hamburger span {
+    height: 4px;
+    width: 30px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    background: red;
+    transition: all 300ms ease-in-out;
+  }
+  .logo {
+    z-index: 4;
+  }
+  .hamburger span:last-child {
+    margin-bottom: 0;
+  }
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50px;
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 50px;
+  }
+  .bg-blue {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(7, 18, 32, 0.95);
+    transition: all 0.5s;
+  }
+  .bg-blue--open {
+    top: 0;
+    opacity: 1;
+    z-index: 2;
+  }
+  .header-navigation__list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-navigation__list li a {
+    padding: 13px 0px;
+  }
+  .footer-box {
+    margin: 10px 0 10px 0;
+  }
+  .firstColumn {
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+  }
+  .secondColumn {
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+  }
+  .thirdColumn {
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+  }
 }

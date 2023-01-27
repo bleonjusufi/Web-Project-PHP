@@ -113,14 +113,7 @@ a:hover {
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(5, 1fr);
 }
-.post_item--big {
-  grid-row: 1/3;
-  grid-column: 1 / span 3;
-}
-.post_item__thumb {
-  position: relative;
-  height: var(--thumb-size, 115px);
-}
+
 a {
   outline: 0;
   color: inherit;
@@ -146,7 +139,7 @@ a:hover {
   line-height: 1.23em;
   margin-bottom: 0.875rem;
 }
-.post_item__excerpt {
+.post_item__except {
   float: left;
   width: 100%;
   line-height: 1.2em;
@@ -380,19 +373,19 @@ footer {
   .footer-box {
     margin: 10px 0 10px 0;
   }
-  .col-lg-5 {
+  .firstColumn {
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
     width: 100%;
   }
-  .col-lg-4 {
+  .secondColumn {
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
     width: 100%;
   }
-  .col-lg-3 {
+  .thirdColumn {
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;

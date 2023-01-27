@@ -63,11 +63,6 @@
     <main>
       <h2 class="title">Lajmet</h2>
       <div class="default_archive">
-        <div
-          class="block_section block_section--top_diff block_section--bottom_diff"
-        >
-          <div class="container"></div>
-        </div>
         <div class="block_section other_items">
           <div class="container">
             <div class="row">
@@ -92,7 +87,7 @@
                         Teknologji jane shume te rendesishme
                       </a>
                     </h3>
-                    <p class="post_item__excerpt">
+                    <p class="post_item__except">
                       <a href="#" class="post_link"
                         >Kompania e famshme e Teknologjise "Microsoft" doli me
                         nje njoftim ku tregon se avancimet qe po ndodhin jane
@@ -118,7 +113,7 @@
                         >Interesim i madh ne Fakultetin e Gazetarise</a
                       >
                     </h3>
-                    <p class="post_item__excerpt">
+                    <p class="post_item__except">
                       <a href="#" class="post_link"
                         >Koheve te fundit ne Fakultetin e Gazetarise ka patur
                         interesim te madh nga studentet</a
@@ -144,7 +139,7 @@
                         fitime me shifra marramendese</a
                       >
                     </h3>
-                    <p class="post_item__excerpt">
+                    <p class="post_item__except">
                       <a href="#" class="post_link"
                         >Inflacioni nuk po ndodh vetem ne Kosove por ne te
                         gjithe globin, kjo dukuri ka bere qe pronaret e disa
@@ -171,7 +166,7 @@
                         Futsal-it</a
                       >
                     </h3>
-                    <p class="post_item__excerpt">
+                    <p class="post_item__except">
                       <a href="#" class="post_link"
                         >Fakulteti i Sportit ka organizuar se fundi Turnirin ne
                         sportin e Futsal-it pjese e te cilit mund te jene
@@ -198,7 +193,7 @@
                         >Kolegji UBT dega Mjekesi
                       </a>
                     </h3>
-                    <p class="post_item__excerpt">
+                    <p class="post_item__except">
                       <a href="#" class="post_link"
                         >Kolegji UBT mori shume levdata per degen e Mjekesise
                         pasi qe studentet e diplomuar ne kete Kolegj jane shum
@@ -222,7 +217,7 @@
                     <h3 class="post_item__title">
                       <a href="#" class="post_link">Drejtesia ne Kosove</a>
                     </h3>
-                    <p class="post_item__excerpt">
+                    <p class="post_item__except">
                       <a href="#" class="post_link"
                         >Emisioni Drejtesia ne Kosove ka regjistruar
                         shikueshmerine me te larte ndonjehere pas ngjarjeve te
@@ -231,16 +226,6 @@
                     </p>
                   </div>
                 </div>
-              </div>
-              <div class="archive_pagination" style="display: none">
-                <span aria-current="page" class="page-numbers current">1</span>
-                <a class="page-numbers" href="/lajm/?archive_paged=2">2</a>
-                <a class="page-numbers" href="/lajm/?archive_paged=3">3</a>
-                <span class="page-numbers dots">&hellip;</span>
-                <a class="page-numbers" href="/lajm/?archive_paged=1667"
-                  >1,667</a
-                >
-                <a class="next page-numbers" href="/lajm/?archive_paged=2">></a>
               </div>
             </div>
           </div>

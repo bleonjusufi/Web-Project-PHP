@@ -99,12 +99,6 @@
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
           </div>
           <br />
-
-          <div style="text-align: center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-          </div>
           <div class="cards-menus">
             <ul class="cards-menus__list">
               <li><a href="#" class="cml">UBT</a></li>
@@ -301,7 +295,7 @@
         </div>
       </div>
     </footer>
-    <script src="./JavaScript/main.js"></script>
+    <!-- <script src="./JavaScript/main.js"></script> -->
     <script src="./JavaScript/loginform.js"></script>
     <script src="./JavaScript/slider.js"></script>
     <script src="./JavaScript/hamburger.js"></script>
