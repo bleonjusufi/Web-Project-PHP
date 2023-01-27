@@ -42,17 +42,17 @@ form.addEventListener("submit", function (e) {
     showSuccess(email);
   }
 
-  if (password.value === "") {
+  if (password.value === null) {
     showError(password, "Fjalëkalimi është i nevojshëm");
   } else {
     showSuccess(password);
   }
-  if (password2.value === "") {
-    showError(password2, "Konfimimi i fjalëkalimit është i nevojshëm");
-  } else if (password2.value !== password.value) {
-    showError(password2, "Fjalkalimet nuk përputhen");
+  if (nrKontakt.value === null) {
+    showError(nrKontakt, "Numri kontaktues është i nevojshëm");
+  } else if (nrKontakt.contains(string)) {
+    showError(nrKontakt, "Numri kontaktues nuk mund te permbaje shkronja");
   } else {
-    showSuccess(password2);
+    showSuccess(nrKontakt);
     alert("Regjistrimi u krye me sukses");
   }
 });

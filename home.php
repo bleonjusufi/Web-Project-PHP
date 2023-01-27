@@ -23,19 +23,31 @@
             </a>
           </div>
           <div class="hamburger"><span></span><span></span><span></span></div>
-          <form class="example" action="#">
-            <input type="text" placeholder="Kerko Sherbimet" id="search" />
-            <button type="submit"><i class="fa fa-search"></i></button>
-          </form>
+          <div class="dropdown">
+            <button class="dropbtn">Sherbime tjera ↓</button>
+            <div class="dropdown-content">
+              <a
+                href="https://accounts.google.com/v3/signin/identifier?dsh=S-1894920174%3A1674647736848699&continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&hd=ubt-uni.net&ltmpl=default&rip=1&sacu=1&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=AWnogHeBVRDRqO-cQ6am6eONgYF65SmsJoPYKV4ZAwpFJ77wWzoNKPh-hSEQa3VbU_CxZgrQFljOkg"
+                >Mail</a
+              >
+              <a href="https://smis.ubt-uni.net/my/loginform.aspx">SMIS</a>
+              <a href="https://moodle.ubt-uni.net/login/index.php">Moodle</a>
+              <a href="https://branch.ubt-uni.net/TV/ScheduleIndex.aspx"
+                >Orari Ditore</a
+              >
+              <a
+                href="http://student.ubt-uni.net/LoginWithGoogle.aspx?undefined"
+                >Studenti</a
+              >
+            </div>
+          </div>
         </div>
       </div>
       <div class="bg-blue">
         <div class="container">
           <div class="header-navigation__list">
             <li>
-              <a href="./home.php" style="border-bottom: 5px solid red"
-                >Home</a
-              >
+              <a href="./home.php" style="border-bottom: 5px solid red">Home</a>
             </li>
             <li><a href="./news.php">News</a></li>
             <li><a href="./about.php">About Us</a></li>
@@ -60,32 +72,38 @@
               <p class="medium">10.0</p>
             </div>
           </div>
-          <div class="featured-articles">
-            <div class="post-item__post-item--big">
-              <img
-                src="./CSS/Images/UBT.jpg"
-                class="fotoUBT"
-                id="imazhi"
-                alt="UBT Campus"
-              />
-              <p class="campus">Kampusi i UBT eshte me inovativi ne rajon</p>
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="CSS\Images\Objekti-I.JPG" alt="" class="fotoSlider" />
+              <div class="text">UBT ofron hapesirat me inovative ne rajon</div>
             </div>
-            <div class="post-item">
-              <div class="articles">
-                <div class="post-item__content">
-                  <img src="./CSS/Images/Erasmus.jpg" alt="" class="erasmus" />
-                  <p class="erasmus-text">Programe Erasmus +</p>
-                </div>
-              </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="CSS\Images\Erasmus.jpg" alt="" class="fotoSlider" />
+              <div class="text">Programet Erasmus+</div>
             </div>
-            <div id="int-projects" class="post-item">
+
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
               <img
-                class="int-projects"
                 src="./CSS/Images/int-project.jpg"
-                alt="InfoCorner"
+                alt=""
+                class="fotoSlider"
               />
-              <p class="info-corner">Hapesira inovative</p>
+              <div class="text">Njohje Internacionale</div>
             </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br />
+
+          <div style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
           </div>
           <div class="cards-menus">
             <ul class="cards-menus__list">
@@ -175,7 +193,7 @@
         <div class="ft-title">
           <h5>UBT - Higher Education Institution</h5>
         </div>
-        <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12 footer-box">
+        <div class="firstColumn">
           <ul class="address">
             <li>
               <a
@@ -185,14 +203,14 @@
               </a>
             </li>
             <li>
-              <a href="./about.html"
+              <a href="./about.php"
                 ><i class="fa fa-home" aria-hidden="true"></i
                 ><span>Për ne</span></a
               >
             </li>
           </ul>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 footer-box">
+        <div class="secondColumn">
           <ul class="footer-contact">
             <li>
               <i class="fa fa-phone" aria-hidden="true"></i>
@@ -203,14 +221,14 @@
               <span>+383 38 542 138</span>
             </li>
             <li>
-              <a href="https://www.ubt-uni.net/sq/ubt/kontakti//"
+              <a href="./contact.php"
                 ><i class="fa fa-address-book" aria-hidden="true"></i
                 ><span>Kontakti</span></a
               >
             </li>
           </ul>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 footer-box">
+        <div class="thirdColumn">
           <ul>
             <li>
               <a href="mailto:info@ubt-uni.net" target="_top"
@@ -283,6 +301,7 @@
         </div>
       </div>
     </footer>
+    <script src="./JavaScript/main.js"></script>
     <script src="./JavaScript/loginform.js"></script>
     <script src="./JavaScript/slider.js"></script>
     <script src="./JavaScript/hamburger.js"></script>

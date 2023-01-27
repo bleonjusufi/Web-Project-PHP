@@ -1,18 +1,16 @@
-var vargu = [
-  "CSS/Images/UBT.jpg",
-  "CSS/Images/BIBLOTEKA-1.jpg",
-  "CSS/Images/IMG_1908-Large.jpg",
-];
-var index = 0;
-var koha = 3500;
+let slideIndex = 0;
+showSlides();
 
-function krijoSlider() {
-  document.getElementById("imazhi").src = vargu[index];
-  index++;
-  if (index == vargu.length) {
-    index = 0;
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
-
-  setTimeout("krijoSlider()", koha);
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(showSlides, 3000);
 }
-krijoSlider();

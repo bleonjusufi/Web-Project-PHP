@@ -16,7 +16,13 @@
     <main>
       <div class="container">
         <div class="log-in__container">
-          <form id="form" class="form" autocomplete="off">
+          <form
+            action="connect.php"
+            method="post"
+            id="form"
+            class="form"
+            autocomplete="off"
+          >
             <h2>Regjistrohu</h2>
             <div class="form-control">
               <label for="username">Emri i përdoruesit</label>
@@ -24,6 +30,7 @@
                 type="text"
                 id="username"
                 placeholder="Shëno emrin tuaj të përdoruesit"
+                name="emri"
               />
               <small>Error message</small>
             </div>
@@ -33,6 +40,7 @@
                 type="text"
                 id="email"
                 placeholder="Shëno adresën elektronike"
+                name="email"
               />
               <small>Error message</small>
             </div>
@@ -42,15 +50,17 @@
                 type="password"
                 id="password"
                 placeholder="Shëno fjalëkalimin"
+                name="password"
               />
               <small>Error message</small>
             </div>
             <div class="form-control">
-              <label for="password2">Konfirmimi i Fjalëkalimit</label>
+              <label for="Numri Kontaktues">Numri Kontaktues</label>
               <input
-                type="password"
-                id="password2"
-                placeholder="Shëno fjalëkalimin përsëri"
+                type="number"
+                id="nrKontakt"
+                placeholder="Shëno Numrin Kontaktues"
+                name="nrKontakt"
               />
               <small>Error message</small>
             </div>

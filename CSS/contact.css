@@ -15,6 +15,7 @@
   align-items: center;
   margin: 20px 0;
 }
+
 .dropbtn {
   background-color: whitesmoke;
   color: #0a223d;
@@ -23,7 +24,6 @@
   font-weight: bold;
   border: 1px solid black;
   border-radius: 8px;
-  box-shadow: 0 3px 6px 0;
 }
 
 .dropdown {
@@ -66,7 +66,6 @@
   border: 1px solid white;
   color: white;
 }
-
 .bg-blue {
   background: #0a223d;
 }
@@ -89,32 +88,52 @@ li a {
 a:hover {
   border-bottom: 5px solid red;
 }
+
 #aLogo {
   border: none;
 }
-.column {
-  float: left;
-  width: 33.3%;
-  margin-top: 25px;
+main {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 10px;
   margin-bottom: 16px;
-  padding: 0 8px;
+  resize: vertical;
 }
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+input[type="email"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 16px;
+  resize: vertical;
 }
-.title {
+#contactFormBtn {
+  font-size: 12px;
   font-weight: bold;
-}
-.card-button {
   background-color: #0a223d;
   color: white;
-  padding: 13px 26px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  width: 100%;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#contactFormBtn:hover {
+  background-color: white;
+  border: 2px solid #0a223d;
+  color: #0a223d;
+  transition: all ease-in-out 0.3s;
 }
 footer {
   margin-right: auto;
@@ -149,7 +168,7 @@ footer {
   font-weight: 700;
   font-size: 20px;
 }
-.firstColumn {
+.col-lg-5 {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
@@ -159,13 +178,13 @@ footer {
   color: white;
   width: 100%;
 }
-.secondColumn {
+.col-lg-4 {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
   width: 33.3%;
 }
-.thirdColumn {
+.col-lg-3 {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
@@ -221,148 +240,4 @@ footer {
 }
 .social-media__links:hover {
   border: none;
-}
-@media only screen and (max-width: 390px) {
-  #search {
-    display: none;
-  }
-  button {
-    display: none;
-  }
-  body.open {
-    overflow: hidden;
-  }
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    z-index: 4;
-  }
-  .hamburger span {
-    height: 4px;
-    width: 30px;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    background: red;
-    transition: all 300ms ease-in-out;
-  }
-  .logo {
-    z-index: 4;
-  }
-  .hamburger span:last-child {
-    margin-bottom: 0;
-  }
-
-  .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg);
-    position: absolute;
-    top: 50px;
-  }
-  .hamburger.active span:nth-child(2) {
-    opacity: 0;
-  }
-  .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg);
-    position: absolute;
-    top: 50px;
-  }
-  form.example {
-    display: none;
-  }
-  .hotel-section__rattings {
-    padding: 0px 6px;
-  }
-  .hotel-section__rattings p.medium {
-    font-size: 12px;
-    line-height: 1em;
-  }
-  .bg-blue {
-    position: fixed;
-    top: -100%;
-    left: 0;
-    opacity: 0;
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
-    z-index: 3;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: rgba(7, 18, 32, 0.95);
-    transition: all 0.5s;
-  }
-  .bg-blue--open {
-    top: 0;
-    opacity: 1;
-    z-index: 2;
-  }
-  .header-navigation__list {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .header-navigation__list li a {
-    padding: 13px 0px;
-  }
-  .header-wrapper {
-    border-bottom: 2px solid #0a223d;
-  }
-  .footer-box {
-    margin: 10px 0 10px 0;
-  }
-  .col-lg-5 {
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 100%;
-  }
-  .col-lg-4 {
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 100%;
-  }
-  .col-lg-3 {
-    min-height: 1px;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 100%;
-  }
-  .column {
-    width: 100%;
-    display: block;
-  }
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  }
-  .container {
-    padding: 0 16px;
-  }
-  .container::after,
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-
-  .title {
-    color: black;
-  }
-
-  .card-button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    margin-bottom: 10px;
-    color: white;
-    background-color: #0a223d;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-  }
-
-  .card-button:hover {
-    background-color: #fff;
-    color: black;
-  }
 }
