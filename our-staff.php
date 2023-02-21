@@ -220,7 +220,7 @@
         <div class="column">
           <div class="card">
             <img
-              src="CSS\Images\Blinera-Zekaj.jpg"
+              src="CSS\Images\Blinera-Zekaj-.jpg"
               alt="Blinera Zekaj"
               style="width: 100%"
             />
