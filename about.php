@@ -38,6 +38,8 @@
                 href="http://student.ubt-uni.net/LoginWithGoogle.aspx?undefined"
                 >Studenti</a
               >
+              <a href="./logout.php">Dilni</a>
+
             </div>
           </div>
         </div>
@@ -255,7 +257,7 @@
             <li>
               <a href="./contact.php"
                 ><i class="fa fa-address-book" aria-hidden="true"></i
-                ><span>Kontakti</span></a
+                ><span>Apliko per Studime</span></a
               >
             </li>
           </ul>

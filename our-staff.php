@@ -38,6 +38,8 @@
                 href="http://student.ubt-uni.net/LoginWithGoogle.aspx?undefined"
                 >Studenti</a
               >
+              <a href="./logout.php">Dilni</a>
+
             </div>
           </div>
         </div>
@@ -223,6 +225,8 @@
               src="CSS\Images\Blinera-Zekaj-.jpg"
               alt="Blinera Zekaj"
               style="width: 100%"
+              ,
+              height="273px";
             />
             <div class="container">
               <h2>BSc.Blinera Zekaj</h2>
@@ -240,6 +244,8 @@
               src="CSS\Images\Dion-Kuka.jpg"
               alt="Dion Kuka"
               style="width: 100%"
+              ,
+              height="273px"
             />
             <div class="container">
               <h2>BSc.Dion Kuka</h2>
@@ -256,6 +262,8 @@
               src="CSS\Images\Greta-Ahma.jpg"
               alt="Greta Ahma"
               style="width: 100%"
+              ,
+              height="273px"
             />
             <div class="container">
               <h2>BSc.Greta Ahma</h2>
@@ -303,7 +311,7 @@
             <li>
               <a href="./contact.php"
                 ><i class="fa fa-address-book" aria-hidden="true"></i
-                ><span>Kontakti</span></a
+                ><span>Apliko per Studime</span></a
               >
             </li>
           </ul>

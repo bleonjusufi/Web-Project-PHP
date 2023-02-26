@@ -1,60 +1,54 @@
-const form = document.getElementById("form");
-const username = document.getElementById("username");
-const email = document.getElementById("email");
-const password = document.getElementById("password");
-const password2 = document.getElementById("password2");
+function validateForm() {
+  
+  const username = document.getElementById('username');
+  const email = document.getElementById('email');
+  const password = document.getElementById('password');
+  const password2 = document.getElementById('confirmPassword');
+  let isValid = true;
 
-//Show input error message
-
-function showError(input, message) {
-  const formControl = input.parentElement;
-  formControl.className = "form-control error";
-  const small = formControl.querySelector("small");
-  small.innerText = message;
-}
-
-function showSuccess(input) {
-  const formControl = input.parentElement;
-  formControl.className = "form-control success";
-}
-
-//Email
-
-function isValidEmail(email) {
-  const re =
-    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(String(email).toLowerCase());
-}
-
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  if (username.value === "") {
-    showError(username, "Emri i përdouesit është i nevojshëm");
+  if (username.value.trim() === '') {
+    showError(username, 'Emri i përdoruesit është i nevojshëm');
+    isValid = false;
   } else {
     showSuccess(username);
   }
-  if (email.value === "") {
-    showError(email, "Adresa Elektronike është e nevojshme");
+
+  if (email.value.trim() === '') {
+    showError(email, 'Email është i nevojshëm');
+    isValid = false;
   } else if (!isValidEmail(email.value)) {
-    showError(email, "Adresa Elektronike nuk është valide");
+    showError(email, 'Email nuk është valid');
+    isValid = false;
   } else {
     showSuccess(email);
   }
 
-  if (password.value === null) {
-    showError(password, "Fjalëkalimi është i nevojshëm");
+  function isValidEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
+
+  if (password.value.trim() === '') {
+    showError(password, 'Fjalëkalimi është i nevojshëm');
+    isValid = false;
+  } else if (password.value.trim().length < 6) {
+    showError(password, 'Fjalëkalimi duhet të jetë së paku 6 karaktere');
+    isValid = false;
   } else {
     showSuccess(password);
   }
-  if (nrKontakt.value === null) {
-    showError(nrKontakt, "Numri kontaktues është i nevojshëm");
-  } else if (nrKontakt.contains(string)) {
-    showError(nrKontakt, "Numri kontaktues nuk mund te permbaje shkronja");
+
+  if (confirmPassword.value.trim() === '') {
+    showError(password2, 'Konfirmimi i fjalëkalimit është i nevojshëm');
+    isValid = false;
+  } else if (password2.value.trim() !== password.value.trim()) {
+    showError(password2, 'Fjalëkalimet nuk përputhen');
+    isValid = false;
   } else {
-    showSuccess(nrKontakt);
-    alert("Regjistrimi u krye me sukses");
+    showSuccess(confirmPassword);
   }
-});
+  
+  return isValid;
+}
 
 // Done

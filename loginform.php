@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,64 +18,67 @@
   </head>
   <body>
     <main>
-      <div class="container">
-        <div class="log-in__container">
-          <form
-            action="connect.php"
-            method="post"
-            id="form"
-            class="form"
-            autocomplete="off"
-          >
-            <h2>Regjistrohu</h2>
-            <div class="form-control">
-              <label for="username">Emri i përdoruesit</label>
-              <input
-                type="text"
-                id="username"
-                placeholder="Shëno emrin tuaj të përdoruesit"
-                name="emri"
-              />
-              <small>Error message</small>
-            </div>
-            <div class="form-control">
-              <label for="email">Adresa Elektornike</label>
-              <input
-                type="text"
-                id="email"
-                placeholder="Shëno adresën elektronike"
-                name="email"
-              />
-              <small>Error message</small>
-            </div>
-            <div class="form-control">
-              <label for="password">Fjalëkalimi</label>
-              <input
-                type="password"
-                id="password"
-                placeholder="Shëno fjalëkalimin"
-                name="password"
-              />
-              <small>Error message</small>
-            </div>
-            <div class="form-control">
-              <label for="Numri Kontaktues">Numri Kontaktues</label>
-              <input
-                type="number"
-                id="nrKontakt"
-                placeholder="Shëno Numrin Kontaktues"
-                name="nrKontakt"
-              />
-              <small>Error message</small>
-            </div>
-            <div class="buttons">
-              <a href="./home.php" class="cancel-button">Kthehu Mbrapa</a>
-              <button type="submit">Regjistrohu</button>
-            </div>
-          </form>
-        </div>
+      <div class="log-in__container" style="margin: 40px auto">
+        <form
+          id="form"
+          class="form"
+          autocomplete="off"
+          method="POST"
+          action="register.php"
+          onsubmit="return validateForm();"
+        >
+          <h2>Regjistrohu</h2>
+          <div class="form-control">
+            <label for="username">Emri i përdoruesit</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Shëno emrin tuaj të përdoruesit"
+            />
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="email">Adresa Elektornike</label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="Shëno adresën elektronike"
+            />
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="password">Fjalëkalimi</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Shëno fjalëkalimin"
+            />
+            <small>Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="password2">Konfirmimi i Fjalëkalimit</label>
+            <input
+              type="password"
+              id="password2"
+              name="password2"
+              placeholder="Shëno fjalëkalimin përsëri"
+            />
+            <small>Error message</small>
+          </div>
+          <div class="buttons">
+            <a href="home.php" class="cancel-button">Kthehu Mbrapa</a>
+            <button type="submit" value="submit" name="register">
+              Regjistrohu
+            </button>
+          </div>
+          <p></p>
+          <a href="./userlogin.php" id="keni">Keni një llogari, Kyçuni!</a>
+        </form>
       </div>
     </main>
-    <script src="./JavaScript/loginform.js"></script>
+    <!-- <script src="./JavaScript/loginform.js"></script> -->
   </body>
 </html>

@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -39,6 +42,7 @@
                 href="http://student.ubt-uni.net/LoginWithGoogle.aspx?undefined"
                 >Studenti</a
               >
+              <a href="./logout.php">Dilni</a>
             </div>
           </div>
         </div>
@@ -59,8 +63,15 @@
     </header>
 
     <!-- Pjesa e Main-it -->
-
+    <?php
+if (!isset($_SESSION["user_email"])) { // user is not logged in
+    $redirect_url = 'userlogin.php';
+} else { // user is logged in
+    $redirect_url = 'home.php';
+}
+?>
     <main>
+      
       <h2 class="title">Lajmet</h2>
       <div class="default_archive">
         <div class="block_section other_items">
@@ -71,7 +82,7 @@
               >
                 <div class="post_item">
                   <div class="post_item__thumb thumb_holder">
-                    <a href="#">
+                  <a href="<?php echo $redirect_url; ?>">
                       <img
                         width="355"
                         height="195"
@@ -82,14 +93,13 @@
                   </div>
                   <div class="post_item__content">
                     <h3 class="post_item__title">
-                      <a href="#"
-                        >Microsoft: Avancimet e medha qe po ndodhin ne
+                    <a href="<?php echo $redirect_url; ?>">
+                    Microsoft: Avancimet e medha qe po ndodhin ne
                         Teknologji jane shume te rendesishme
                       </a>
                     </h3>
                     <p class="post_item__except">
-                      <a href="#" class="post_link"
-                        >Kompania e famshme e Teknologjise "Microsoft" doli me
+                    <a href="<?php echo $redirect_url; ?>" class="post-link">Kompania e famshme e Teknologjise "Microsoft" doli me
                         nje njoftim ku tregon se avancimet qe po ndodhin jane
                         shume te rendesishme</a
                       >
@@ -98,7 +108,7 @@
                 </div>
                 <div class="post_item">
                   <div class="post_item__thumb thumb_holder">
-                    <a href="#" class="post_link">
+                  <a href="<?php echo $redirect_url; ?>" class="post-link">
                       <img
                         width="355"
                         height="195"
@@ -109,13 +119,11 @@
                   </div>
                   <div class="post_item__content">
                     <h3 class="post_item__title">
-                      <a href="#" class="post_link"
-                        >Interesim i madh ne Fakultetin e Gazetarise</a
+                    <a href="<?php echo $redirect_url; ?>" class="post-link">Interesim i madh ne Fakultetin e Gazetarise</a
                       >
                     </h3>
                     <p class="post_item__except">
-                      <a href="#" class="post_link"
-                        >Koheve te fundit ne Fakultetin e Gazetarise ka patur
+                    <a href="<?php echo $redirect_url; ?>" class="post-link">Koheve te fundit ne Fakultetin e Gazetarise ka patur
                         interesim te madh nga studentet</a
                       >
                     </p>
@@ -123,7 +131,7 @@
                 </div>
                 <div class="post_item">
                   <div class="post_item__thumb thumb_holder">
-                    <a href="#" class="post_link">
+                  <a href="<?php echo $redirect_url; ?>" class="post-link">
                       <img
                         width="355"
                         height="195"
@@ -134,14 +142,12 @@
                   </div>
                   <div class="post_item__content">
                     <h3 class="post_item__title">
-                      <a href="#" class="post_link"
-                        >Rritja e madhe e cmimeve ka bere qe bizneset te kene
+                    <a href="<?php echo $redirect_url; ?>" class="post-link">Rritja e madhe e cmimeve ka bere qe bizneset te kene
                         fitime me shifra marramendese</a
                       >
                     </h3>
                     <p class="post_item__except">
-                      <a href="#" class="post_link"
-                        >Inflacioni nuk po ndodh vetem ne Kosove por ne te
+                    <a href="<?php echo $redirect_url; ?>" class="post-link">Inflacioni nuk po ndodh vetem ne Kosove por ne te
                         gjithe globin, kjo dukuri ka bere qe pronaret e disa
                         lloje te bizneseve te kene fitime te medha</a
                       >
@@ -150,7 +156,7 @@
                 </div>
                 <div class="post_item">
                   <div class="post_item__thumb thumb_holder">
-                    <a href="#" class="post_link">
+                  <a href="<?php echo $redirect_url; ?>" class="post-link">
                       <img
                         width="355"
                         height="195"
@@ -161,14 +167,12 @@
                   </div>
                   <div class="post_item__content">
                     <h3 class="post_item__title">
-                      <a href="#" class="post_link"
-                        >Fakulteti i Edukates Fizike organizon garen e
+                    <a href="<?php echo $redirect_url; ?>" class="post-link">Fakulteti i Edukates Fizike organizon garen e
                         Futsal-it</a
                       >
                     </h3>
                     <p class="post_item__except">
-                      <a href="#" class="post_link"
-                        >Fakulteti i Sportit ka organizuar se fundi Turnirin ne
+                    <a href="<?php echo $redirect_url; ?>" class="post-link">Fakulteti i Sportit ka organizuar se fundi Turnirin ne
                         sportin e Futsal-it pjese e te cilit mund te jene
                         studentet e Kolegjit UBT per detaje shikoni emailin qe
                         keni pranuar rreth ketij turnri</a
@@ -178,7 +182,7 @@
                 </div>
                 <div class="post_item">
                   <div class="post_item__thumb thumb_holder">
-                    <a href="#" class="post_link">
+                  <a href="<?php echo $redirect_url; ?>" class="post-link">
                       <img
                         width="355"
                         height="195"
@@ -189,13 +193,11 @@
                   </div>
                   <div class="post_item__content">
                     <h3 class="post_item__title">
-                      <a href="#" class="post_link"
-                        >Kolegji UBT dega Mjekesi
+                    <a href="<?php echo $redirect_url; ?>" class="post-link">Kolegji UBT dega Mjekesi
                       </a>
                     </h3>
                     <p class="post_item__except">
-                      <a href="#" class="post_link"
-                        >Kolegji UBT mori shume levdata per degen e Mjekesise
+                    <a href="<?php echo $redirect_url; ?>" class="post-link">Kolegji UBT mori shume levdata per degen e Mjekesise
                         pasi qe studentet e diplomuar ne kete Kolegj jane shum
                         te aftesuar</a
                       >
@@ -204,7 +206,7 @@
                 </div>
                 <div class="post_item">
                   <div class="post_item__thumb thumb_holder">
-                    <a href="#" class="post_link">
+                  <a href="<?php echo $redirect_url; ?>" class="post-link">
                       <img
                         width="355"
                         height="195"
@@ -215,11 +217,10 @@
                   </div>
                   <div class="post_item__content">
                     <h3 class="post_item__title">
-                      <a href="#" class="post_link">Drejtesia ne Kosove</a>
+                    <a href="<?php echo $redirect_url; ?>" class="post-link">Drejtesia ne Kosove</a>
                     </h3>
                     <p class="post_item__except">
-                      <a href="#" class="post_link"
-                        >Emisioni Drejtesia ne Kosove ka regjistruar
+                    <a href="<?php echo $redirect_url; ?>" class="post-link">Emisioni Drejtesia ne Kosove ka regjistruar
                         shikueshmerine me te larte ndonjehere pas ngjarjeve te
                         fundit</a
                       >
@@ -270,7 +271,7 @@
             <li>
               <a href="./contact.php"
                 ><i class="fa fa-address-book" aria-hidden="true"></i
-                ><span>Kontakti</span></a
+                ><span>Apliko per Studime</span></a
               >
             </li>
           </ul>
