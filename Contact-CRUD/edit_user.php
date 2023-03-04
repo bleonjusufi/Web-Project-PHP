@@ -8,10 +8,8 @@ class UserCRUD {
     private $conn;
 
     public function __construct() {
-        // Create MySQL database connection
         $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
 
-        // Check MySQL database connection
         if ($this->conn->connect_error) {
             die("Connection failed: " . $this->conn->connect_error);
         }
@@ -44,7 +42,6 @@ class UserCRUD {
     }
 }
 
-// Create new instance of UserCRUD
 $userCRUD = new UserCRUD();
 
 if (isset($_POST['edit'])) {
