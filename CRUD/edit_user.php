@@ -1,49 +1,80 @@
 <?php
-// Create MySQL database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "user";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+class Database {
+	private $servername = "localhost";
+	private $username = "root";
+	private $password = "";
+	private $dbname = "user";
+	private $conn;
 
-// Check MySQL database connection
-if ($conn->connect_error) {
-	die("Connection failed: " . $conn->connect_error);
+	public function __construct() {
+		$this->conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
+
+		if ($this->conn->connect_error) {
+			die("Connection failed: " . $this->conn->connect_error);
+		}
+	}
+
+	public function getUserByID($id) {
+		$sql = "SELECT * FROM useri WHERE User_ID='$id'";
+		$result = $this->conn->query($sql);
+
+		if ($result->num_rows == 1) {
+			$row = $result->fetch_assoc();
+			return $row;
+		} else {
+			return false;
+		}
+	}
+
+	public function updateUser($id, $username, $email, $password) {
+		$sql = "UPDATE useri SET Username='$username', Email='$email', Password='$password' WHERE User_ID='$id'";
+
+		if ($this->conn->query($sql) === TRUE) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public function closeConnection() {
+		$this->conn->close();
+	}
 }
 
 if (isset($_POST['edit'])) {
+	$db = new Database();
 	$User_ID = $_POST['User_ID'];
-	$sql = "SELECT * FROM useri WHERE User_ID='$User_ID'";
-	$result = $conn->query($sql);
+	$user = $db->getUserByID($User_ID);
 
-	if ($result->num_rows == 1) {
-		$row = $result->fetch_assoc();
-		$Username = $row['Username'];
-		$Email = $row['Email'];
-		$Password = $row['Password'];
+	if ($user) {
+		$Username = $user['Username'];
+		$Email = $user['Email'];
+		$Password = $user['Password'];
 	} else {
 		echo "User not found.";
 	}
+
+	$db->closeConnection();
 } elseif (isset($_POST['save'])) {
+	$db = new Database();
 	$User_ID = $_POST['User_ID'];
 	$Username = $_POST['Username'];
 	$Email = $_POST['Email'];
 	$Password = $_POST['Password'];
 
-	$sql = "UPDATE useri SET Username='$Username', Email='$Email', Password='$Password' WHERE User_ID='$User_ID'";
-
-	if ($conn->query($sql) === TRUE) {
+	if ($db->updateUser($User_ID, $Username, $Email, $Password)) {
 		echo "Record updated successfully";
 	} else {
 		echo "Error updating record: " . $conn->error;
 	}
 
+	$db->closeConnection();
+
 	header("Location: crud.php");
 	exit();
 }
 
-$conn->close();
 ?>
 
 <!DOCTYPE html>
