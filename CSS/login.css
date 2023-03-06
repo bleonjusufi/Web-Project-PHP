@@ -87,6 +87,7 @@
     color: white;
     font-weight: 700;
     cursor: pointer;
+    border: none;
     border-radius: 5px;
     font-size: 16px;
     padding: 10px;
@@ -117,10 +118,10 @@
   }
 
   #signUpButton:hover {
-    background-color: white;
-    color: black;
+    background-color: green;
+    color: white;
     transition: all ease-in-out 0.3s;
-    border: 1px solid #0a223d;
+    border: none;
   }
   #cancel-button:hover {
     background-color: red;

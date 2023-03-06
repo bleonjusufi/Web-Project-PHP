@@ -1,5 +1,6 @@
 <?php
-	require '../login.php';
+	// require '../login.php';
+	session_start();
 
 	if(!(isset($_SESSION))){
         header("Location: ../home.php");
