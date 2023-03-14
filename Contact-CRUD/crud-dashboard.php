@@ -42,32 +42,26 @@ if(!(isset($_SESSION))){
 		  $this->password = $password;
 		  $this->dbname = $dbname;
 	  
-		  // Create MySQL database connection
 		  $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
 	  
-		  // Check MySQL database connection
 		  if ($this->conn->connect_error) {
 			die("Connection failed: " . $this->conn->connect_error);
 		  }
 		}
 	  
 		public function registerUser() {
-		  // Check if the form was submitted
 		  if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	  
-			// Retrieve form data and escape special characters
 			$Emri = mysqli_real_escape_string($this->conn, $_POST["Emri"]);
 			$NumriPersonal = mysqli_real_escape_string($this->conn, $_POST["NumriPersonal"]);
 			$Email = mysqli_real_escape_string($this->conn, $_POST["Email"]);
 			$Departamenti = mysqli_real_escape_string($this->conn, $_POST["Departamenti"]);
 	  
-			// Check if user with same email already exists
 			$sql = "SELECT * FROM aplikimi WHERE Email='$Email'";
 			$result = $this->conn->query($sql);
 			if ($result->num_rows > 0) {
 			  echo "User with this email already exists";
 			} else {
-				// Insert user data into MySQL database
 				$sql = "INSERT INTO aplikimi (Emri, NumriPersonal, Email, Departamenti) VALUES ('$Emri', '$NumriPersonal', '$Email', '$Departamenti')";
 				if ($this->conn->query($sql) === TRUE) {
 				  echo "New user created successfully";

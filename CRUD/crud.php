@@ -41,35 +41,28 @@
 		  $this->password = $password;
 		  $this->dbname = $dbname;
 	  
-		  // Create MySQL database connection
 		  $this->conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
 	  
-		  // Check MySQL database connection
 		  if ($this->conn->connect_error) {
 			die("Connection failed: " . $this->conn->connect_error);
 		  }
 		}
 	  
 		public function registerUser() {
-		  // Check if the form was submitted
 		  if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	  
-			// Retrieve form data and escape special characters
 			$username = mysqli_real_escape_string($this->conn, $_POST["username"]);
 			$email = mysqli_real_escape_string($this->conn, $_POST["email"]);
 			$password = mysqli_real_escape_string($this->conn, $_POST["password"]);
 	  
-			// Check if user with same email already exists
 			$sql = "SELECT * FROM useri WHERE Email='$email'";
 			$result = $this->conn->query($sql);
 			if ($result->num_rows > 0) {
 			  echo "User with this email already exists";
 			} else {
-			  // Check if password is at least 6 characters long
 			  if (strlen($password) < 6) {
 				echo "Password must be at least 6 characters long";
 			  } else {
-				// Insert user data into MySQL database
 				$sql = "INSERT INTO useri (Username, Email, Password) VALUES ('$username', '$email', '$password')";
 				if ($this->conn->query($sql) === TRUE) {
 				  echo "New user created successfully";
